@@ -57,7 +57,7 @@ const authUser = asyncHandler(async (req, res) => {
   if (!email || !password) {
     res.status(400).json({ Status: "INVALID", message: "error in body" });
   }
-  // const user = await User.findOne({ email });
+
   User.findOne({ email })
     .then((user) => {
       bcrypt
