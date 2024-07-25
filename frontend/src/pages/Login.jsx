@@ -19,33 +19,7 @@ const Login = () => {
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  //   const submitHandler = async (e) => {
-  //     e.preventDefault();
-  //     setLoading(true);
 
-  //     try {
-  //       const config = {
-  //         headers: {
-  //           "Content-type": "application/json",
-  //         },
-  //       };
-  //       const { data } = await axios.post(
-  //         "http://localhost:5000/api/users/login",
-  //         {
-  //           email: formData.email,
-  //           password: formData.password,
-  //         },
-  //         config
-  //       );
-  //       setLoading(false);
-  //       console.log(data);
-  //       localStorage.setItem("userInfo", JSON.stringify(data));
-  //     } catch (error) {
-  //       console.log(error);
-  //       setLoading(false);
-  //       setError(error.response.data.message);
-  //     }
-  //   };
   const submitHandler = async (e) => {
     let email = formData.email;
     let password = formData.password;
